@@ -1,0 +1,820 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    background-color: #fd3463;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
+    resize: none;
+    outline: 0;
+  }
+  
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+  
+  /* ==========================================================================
+     HTML5 display definitions
+     ========================================================================== */
+  
+  /**
+   * Prevent modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+  
+  audio:not([controls]) {
+      display: none;
+      height: 0;
+  }
+  
+  /* ==========================================================================
+     Base
+     ========================================================================== */
+  
+  /**
+   * 2. Prevent iOS text size adjust after orientation change, without disabling
+   *    user zoom.
+   */
+  
+  html {
+      -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /**
+   * Remove default margin.
+   */
+  
+  body {
+      margin: 0;
+  }
+  
+  /* ==========================================================================
+     Links
+     ========================================================================== */
+  
+  /**
+   * Address `outline` inconsistency between Chrome and other browsers.
+   */
+  
+  a:focus {
+      outline: thin dotted;
+  }
+  
+  /**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */
+  
+  a:active,
+  a:hover {
+      outline: 0;
+  }
+  
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  
+  /**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+  }
+  
+  /**
+   * Address styling not present in IE 8/9, Safari 5, and Chrome.
+   */
+  
+  abbr[title] {
+      border-bottom: 1px dotted;
+  }
+  
+  /**
+   * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  b,
+  strong {
+      font-weight: bold;
+  }
+  
+  /**
+   * Address styling not present in Safari 5 and Chrome.
+   */
+  
+  dfn {
+      font-style: italic;
+  }
+  
+  /**
+   * Address differences between Firefox and other browsers.
+   */
+  
+  hr {
+      box-sizing: content-box;
+      height: 0;
+  }
+  
+  /**
+   * Correct font family set oddly in Safari 5 and Chrome.
+   */
+  
+  code,
+  kbd,
+  pre,
+  samp {
+      font-size: 1em;
+  }
+  
+  /**
+   * Improve readability of pre-formatted text in all browsers.
+   */
+  
+  pre {
+      white-space: pre-wrap;
+  }
+  
+  /**
+   * Set consistent quote types.
+   */
+  
+  q {
+      quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+  
+  /**
+   * Address inconsistent and variable font size in all browsers.
+   */
+  
+  small {
+      font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+  
+  sub,
+  sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+  }
+  
+  sup {
+      top: -0.5em;
+  }
+  
+  sub {
+      bottom: -0.25em;
+  }
+  
+  /* ==========================================================================
+     Figures
+     ========================================================================== */
+  
+  /**
+   * Address margin not present in IE 8/9 and Safari 5.
+   */
+  
+  figure {
+      margin: 0;
+  }
+  
+  /* ==========================================================================
+     Forms
+     ========================================================================== */
+  
+  /**
+   * Define consistent border, margin, and padding.
+   */
+  
+  fieldset {
+      border: 1px solid #c0c0c0;
+      margin: 0 2px;
+      padding: 0.35em 0.625em 0.75em;
+  }
+  
+  /**
+   * 1. Correct `color` not being inherited in IE 8/9.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+  
+  legend {
+      padding: 0; /* 2 */
+  }
+  
+  /**
+   * 2. Correct font size not being inherited in all browsers.
+   * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  button,
+  input,
+  select,
+  textarea {
+      font-size: 100%; /* 2 */
+      margin: 0; /* 3 */
+  }
+  
+  /**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+   * Correct `select` style inheritance in Firefox 4+ and Opera.
+   */
+  
+  button,
+  select {
+      text-transform: none;
+  }
+  
+  /**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   */
+  
+  button,
+  html input[type="button"], /* 1 */
+  input[type="reset"],
+  input[type="submit"] {
+      -webkit-appearance: button; /* 2 */
+      appearance: button;
+  }
+  
+  /**
+   * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+   *    (include `-moz` to future-proof).
+   */
+  
+  input[type="search"] {
+      -webkit-appearance: textfield; /* 1 */
+      appearance: textfield;
+      -webkit-box-sizing: content-box; /* 2 */
+      box-sizing: content-box;
+  }
+  
+  /**
+   * Remove inner padding and search cancel button in Safari 5 and Chrome
+   * on OS X.
+   */
+  
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+  }
+  
+  /**
+   * 2. Improve readability and alignment in all browsers.
+   */
+  
+  textarea {
+      vertical-align: top; /* 2 */
+  }
+  
+  /* ==========================================================================
+     Tables
+     ========================================================================== */
+  
+  /**
+   * Remove most spacing between table cells.
+   */
+  
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+::selection {
+    color: #fff;
+    background: #fd3463;
+}
+
+.fa-house{
+    color: #fd3463;
+}
+/* Home - index.html */
+ 
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start_btn {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.start_btn.activeInfo,
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn button {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fd3463;
+    width: 250px;
+    height: 75px;
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.start_btn #button_score, #button_home {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fd3463;
+    width: 250px;
+    height: 75px;
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px;
+}
+
+.info_box {
+    width: 610px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.info_box .info-title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info-list {
+    padding: 15px 30px;
+}
+
+.info_box .info-list .info {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info_box .info-list .info span {
+    font-weight: 600;
+    color: #fd3463;
+}
+
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 112px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #fd3463;
+    transition: all 0.3s ease;
+}
+
+.buttons button.restart {
+    color: #fff;
+    background: #fd3463;
+}
+
+.buttons button.restart:hover {
+    background: #FF5D8F;
+}
+
+.buttons button.salvar {
+    color: #fff;
+    background: #fd3463;
+}
+
+.buttons button.salvar:hover {
+    background: #FF87AB;
+}
+
+.buttons button.quit {
+    color: #fd3463;
+    background: #fff;
+}
+
+.buttons button.quit:hover {
+    color: #fff;
+    background: #fd3463;
+}
+
+/* END - Home - index.html */
+
+/* Quiz Box */
+.quiz_box {
+    width: 610px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.quiz_box header {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz_box header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box header .timer {
+    color: #FF87AB;
+    background: #FADDE1;
+    border: 1px solid #F4ACB7;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 215px;
+}
+
+.quiz_box header .timer .time_left_txt {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz_box header .timer .timer_sec {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #FFCAD4;
+    border: 1px solid #FF87AB;
+    user-select: none;
+}
+
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #fd3463;
+    max-width: 100%;
+}
+
+section {
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+section .que_text {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+section .option_list {
+    padding: 20px 0px;
+    display: block;
+}
+
+section .option_list .option {
+    background: #FFCAD4;
+    border: 1px solid #FADDE1;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .option_list .option:last-child {
+    margin-bottom: 0px;
+}
+
+section .option_list .option:hover {
+    color: #FF5D8F;
+    background: #FF5D8F;
+    border: 1px solid #FF5D8F;
+}
+
+section .option_list .option.correct {
+    color: #155724;
+    background: #FFA6C1;
+    border: 1px solid #FFA6C1;
+}
+
+section .option_list .option.incorrect {
+    color: #721c24;
+    background: #FFA6C1;
+    border: 1px solid #FFA6C1;
+}
+
+section .option_list .option.disabled {
+    pointer-events: none;
+}
+
+section .option_list .option .icon {
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+
+.option_list .option .icon.tick {
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.option_list .option .icon.cross {
+    color: #a42834;
+    background: #f8d7da;
+    border-color: #a42834;
+}
+
+.choice-prefix {
+    padding: 1rem 2rem;
+    background-color: #FF87AB;
+    color: white;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+}
+
+footer {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+footer .total_que span {
+    display: flex;
+    user-select: none;
+}
+
+footer .total_que span p {
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .total_que span p:first-child {
+    padding-left: 0px;
+} 
+
+footer .hud-item {
+    display: inline-block;
+}
+
+footer .hud-prefix {
+    text-align: center;
+}
+
+footer .hud-main-text {
+    text-align: center;
+}
+
+footer button {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #fd3463;
+    border: 1px solid #fd3463;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover {
+    background: #FF5D8F;
+}
+
+footer button.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+/* End - Quiz Box */
+
+/* Result Box */
+.result_box {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.result_box .icon {
+    font-size: 100px;
+    color: #fd3463;
+    margin-bottom: 10px;
+}
+
+.result_box .complete_text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result_box .score_text span {
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result_box .score_text span p {
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.result_box .buttons {
+    display: flex;
+    margin: 20px 0;
+}
+
+.result_box .buttons button {
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #fd3463;
+    transition: all 0.3s ease;
+}
+
+/* End - Result Box */
+
+/* high Scores */
+#highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
+/* end - high Scores */
+
+#page-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#loader {
+    margin-top: 4rem;
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid #FFA6C1;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+} 
+
+@media (max-width: 768px) {
+
+    * {
+        overflow: hidden;
+    }
+
+    .info_box {
+        width: 100%;
+    }
+
+    .quiz_box {
+        max-width: 100%;
+        zoom: 0.8;
+    }
+}
