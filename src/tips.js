@@ -6,6 +6,9 @@ const form = document.getElementById("send");
 const userInput = document.getElementById("user");
 const pwdInput = document.getElementById("pwd");
 const news = document.querySelectorAll(".news");
+const h1 = document.querySelector(".quiz-title")
+
+h1.style.display = "none"
 
 tipsLink.addEventListener("click", function() {
     window.location.href = "../tips.html";
